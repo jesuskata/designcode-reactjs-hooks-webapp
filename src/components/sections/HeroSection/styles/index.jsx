@@ -1,6 +1,10 @@
 // Dependencies
 import styled from 'styled-components';
 
+// Styled Components
+import { H1, MediumText } from '../../../styles/TextStyles';
+import { themes } from '../../../styles/ColorStyles';
+
 export const Wrapper = styled.div`
   background: linear-gradient(180deg, #4316DB 0%, #9076E7 100%);
 `;
@@ -17,13 +21,8 @@ export const TextWrapper = styled.div`
   gap: 30px
 `;
 
-export const Title = styled.h1`
-  font-weight: bold;
-  font-size: 60px;
-  color: white;
+export const Title = styled(H1)`
+  color: ${themes.dark.text1};
 `;
 
-export const Description = styled.p`
-  font-size: 17px;
-  line-height: 130%;
-`;
+export const Description = styled(MediumText)``;
