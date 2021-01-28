@@ -4,13 +4,21 @@ import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 
 // Styled Components
-import { Wrapper, Title, SubTitle } from './styles';
+import {
+  Wrapper, IconWrapper, Icon, Ring, TextWrapper, Title, SubTitle
+} from './styles';
 
 export const PurchaseButton = ({ title, subtitle }) => (
   <Link to="/page-2">
     <Wrapper>
-      <Title>{title}</Title>
-      <SubTitle>{subtitle}</SubTitle>
+      <IconWrapper>
+        <Icon src="/images/icons/credit.svg" />
+        <Ring src="/images/icons/icon-ring.svg" />
+      </IconWrapper>
+      <TextWrapper>
+        <Title>{title}</Title>
+        <SubTitle>{subtitle}</SubTitle>
+      </TextWrapper>
     </Wrapper>
   </Link>
 );
