@@ -1,6 +1,8 @@
 // Dependecies
 import React from 'react';
-// import { Link } from 'gatsby';
+
+// Components
+import { PurchaseButton } from '../../buttons/PurchaseButton';
 
 // Styled Components
 import {
@@ -23,6 +25,10 @@ export const HeroSection = () => (
         <Description>
           Don’t skip design. Learn design and code, by building real apps, collaborate and solving product UI problems.
         </Description>
+        <PurchaseButton
+          title="Start learning"
+          subtitle="120+ hours of video"
+        />
       </TextWrapper>
     </ContentWrapper>
   </Wrapper>
