@@ -12,7 +12,7 @@ export const PurchaseButton = ({ title, subtitle }) => (
   <Link to="/page-2">
     <Wrapper>
       <IconWrapper>
-        <Icon src="/images/icons/credit.svg" />
+        <Icon src="/images/icons/credit.svg" className="icon" />
         <Ring src="/images/icons/icon-ring.svg" />
       </IconWrapper>
       <TextWrapper>
