@@ -1,9 +1,11 @@
 // Dependencies
 import React from 'react';
-import { Link } from 'gatsby';
+
+// Components
+import { MenuButtons } from '../../buttons/MenuButtons';
 
 // Styled Components
-import { Wrapper, MenuWrapper, MenuItem } from './styles';
+import { Wrapper, MenuWrapper } from './styles';
 
 // Data
 import { menuData } from '../../../data/menuData';
@@ -11,14 +13,9 @@ import { menuData } from '../../../data/menuData';
 export const Header = () => (
   <Wrapper>
     <img src="/images/logos/logo.svg" alt="logo" />
-    <MenuWrapper>
-      {menuData.map((item, index) => (
-        <Link to={item.link} key={item.title}>
-          <MenuItem>
-            <img src={item.icon} alt={item.title} />
-            {item.title}
-          </MenuItem>
-        </Link>
+    <MenuWrapper count={menuData.length}>
+      {menuData.map((item) => (
+        <MenuButtons item={item} key={item.link} />
       ))}
     </MenuWrapper>
   </Wrapper>
