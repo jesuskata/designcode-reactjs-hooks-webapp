@@ -1,5 +1,5 @@
 // Dependencies
-import React from 'react';
+import React, { useState } from 'react';
 
 // Components
 import { MenuButtons } from '../../buttons/MenuButtons';
@@ -11,14 +11,26 @@ import { Wrapper, MenuWrapper } from './styles';
 // Data
 import { menuData } from '../../../data/menuData';
 
-export const Header = () => (
-  <Wrapper>
-    <img src="/images/logos/logo.svg" alt="logo" />
-    <MenuWrapper count={menuData.length}>
-      {menuData.map((item) => (
-        <MenuButtons item={item} key={item.link} />
-      ))}
-    </MenuWrapper>
-    <MenuTooltip />
-  </Wrapper>
-);
+export const Header = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleMenuClick = () => {
+    setIsOpen(!isOpen);
+  };
+
+  return (
+    <Wrapper>
+      <img src="/images/logos/logo.svg" alt="logo" />
+      <MenuWrapper count={menuData.length}>
+        {menuData.map((item) => (item.link === '/account'
+          ? (
+            <MenuButtons item={item} key={item.link} onClick={handleMenuClick} />
+          )
+          : (
+            <MenuButtons item={item} key={item.link} />
+          )))}
+      </MenuWrapper>
+      <MenuTooltip isOpen={isOpen} />
+    </Wrapper>
+  );
+};
