@@ -2,20 +2,24 @@
 import React from 'react';
 import { Link } from 'gatsby';
 
+// Styled Components
+import { Wrapper, MenuWrapper, MenuItem } from './styles';
+
 // Data
-const menuData = [
-  { title: 'Courses', icon: '/images/icons/courses.svg', link: '/courses' },
-  { title: 'Tutorials', icon: '/images/icons/tutorials.svg', link: '/tutorials' },
-  { title: 'Pricing', icon: '/images/icons/pricing.svg', link: '/pricing' },
-];
+import { menuData } from '../../../data/menuData';
 
 export const Header = () => (
-  <>
-    {menuData.map((item, index) => (
-      <Link to={item.link} key={item.title}>
-        <img src={item.icon} alt={item.title} />
-        {item.title}
-      </Link>
-    ))}
-  </>
+  <Wrapper>
+    <img src="/images/logos/logo.svg" alt="logo" />
+    <MenuWrapper>
+      {menuData.map((item, index) => (
+        <Link to={item.link} key={item.title}>
+          <MenuItem>
+            <img src={item.icon} alt={item.title} />
+            {item.title}
+          </MenuItem>
+        </Link>
+      ))}
+    </MenuWrapper>
+  </Wrapper>
 );
