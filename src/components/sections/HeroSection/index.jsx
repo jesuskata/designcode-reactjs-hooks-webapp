@@ -3,6 +3,7 @@ import React from 'react';
 
 // Components
 import { PurchaseButton } from '../../buttons/PurchaseButton';
+import { MockupAnimation } from '../../animations/MockupAnimation';
 
 // Styled Components
 import {
@@ -30,6 +31,7 @@ export const HeroSection = () => (
           subtitle="120+ hours of video"
         />
       </TextWrapper>
+      <MockupAnimation />
     </ContentWrapper>
   </Wrapper>
 );
