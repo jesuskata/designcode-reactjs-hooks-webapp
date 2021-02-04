@@ -3,6 +3,7 @@ import React from 'react';
 
 // Components
 import { MenuButtons } from '../../buttons/MenuButtons';
+import { MenuTooltip } from '../../tooltips/MenuTooltip';
 
 // Styled Components
 import { Wrapper, MenuWrapper } from './styles';
@@ -18,5 +19,6 @@ export const Header = () => (
         <MenuButtons item={item} key={item.link} />
       ))}
     </MenuWrapper>
+    <MenuTooltip />
   </Wrapper>
 );
