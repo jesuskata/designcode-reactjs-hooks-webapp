@@ -14,8 +14,9 @@ import { menuData } from '../../../data/menuData';
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const handleMenuClick = () => {
+  const handleMenuClick = (event) => {
     setIsOpen(!isOpen);
+    event.preventDefault();
   };
 
   return (

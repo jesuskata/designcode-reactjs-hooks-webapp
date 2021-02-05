@@ -6,8 +6,8 @@ import { Link } from 'gatsby';
 // Styled Components
 import { MenuItem } from './styles';
 
-export const MenuButtons = ({ item }) => (
-  <Link to={item.link}>
+export const MenuButtons = ({ item, onClick }) => (
+  <Link to={item.link} onClick={onClick}>
     <MenuItem title={item.title}>
       <img src={item.icon} alt={item.title} />
       {item.title}
@@ -16,5 +16,6 @@ export const MenuButtons = ({ item }) => (
 );
 
 MenuButtons.propTypes = {
-  item: PropTypes.objectOf(PropTypes.any)
+  item: PropTypes.objectOf(PropTypes.any),
+  onClick: PropTypes.func
 };
