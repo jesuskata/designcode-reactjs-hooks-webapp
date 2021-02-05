@@ -6,7 +6,6 @@ import { H1, MediumText } from '../../../styles/TextStyles';
 import { themes } from '../../../styles/ColorStyles';
 
 export const Wrapper = styled.div`
-  background: linear-gradient(180deg, #4316DB 0%, #9076E7 100%);
   overflow: hidden;
 `;
 

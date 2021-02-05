@@ -4,6 +4,7 @@ import React from 'react';
 // Components
 import { PurchaseButton } from '../../buttons/PurchaseButton';
 import { MockupAnimation } from '../../animations/MockupAnimation';
+import { WaveBackground } from '../../backgrounds/WaveBackground';
 
 // Styled Components
 import {
@@ -16,6 +17,7 @@ import {
 
 export const HeroSection = () => (
   <Wrapper>
+    <WaveBackground />
     <ContentWrapper>
       <TextWrapper>
         <Title>
