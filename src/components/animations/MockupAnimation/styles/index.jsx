@@ -36,7 +36,7 @@ export const Wrapper = styled.div`
       transform: translate(-90px, 30px);
     }
     :hover {
-      filter: brightness(150%) saturate(120%)
+      filter: brightness(150%) saturate(120%);
     }
   }
 

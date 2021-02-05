@@ -20,7 +20,7 @@ export const ContentWrapper = styled.div`
 export const TextWrapper = styled.div`
   max-width: 360px;
   display: grid;
-  gap: 30px
+  gap: 30px;
 `;
 
 export const Title = styled(H1)`

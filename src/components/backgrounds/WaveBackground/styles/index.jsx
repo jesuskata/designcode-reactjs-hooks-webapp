@@ -11,9 +11,9 @@ export const Wave = styled.img`
 `;
 
 export const Background = styled.div`
-  background: linear-gradient(180deg, #4316DB 0%, #9076E7 100%);
   position: absolute;
   width: 100%;
   height: 800px;
+  background: linear-gradient(180deg, #4316DB 0%, #9076E7 100%);
   z-index: -1;
 `;
