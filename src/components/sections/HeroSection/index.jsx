@@ -23,7 +23,11 @@ export const HeroSection = () => (
         <Title>
           Design
           <br />
-          and code ReactJS apps
+          and code
+          {' '}
+          <span>ReactJS</span>
+          {' '}
+          apps
         </Title>
         <Description>
           Don’t skip design. Learn design and code, by building real apps, collaborate and solving product UI problems.

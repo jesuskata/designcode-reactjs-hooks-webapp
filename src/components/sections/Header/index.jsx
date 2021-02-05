@@ -6,7 +6,7 @@ import { MenuButtons } from '../../buttons/MenuButtons';
 import { MenuTooltip } from '../../tooltips/MenuTooltip';
 
 // Styled Components
-import { Wrapper, MenuWrapper } from './styles';
+import { Wrapper, MenuWrapper, HamburgerWrapper } from './styles';
 
 // Data
 import { menuData } from '../../../data/menuData';
@@ -30,6 +30,9 @@ export const Header = () => {
           : (
             <MenuButtons item={item} key={item.link} />
           )))}
+        <HamburgerWrapper>
+          <MenuButtons item={{ title: '', icon: '/images/icons/hamburger.svg', link: '' }} />
+        </HamburgerWrapper>
       </MenuWrapper>
       <MenuTooltip isOpen={isOpen} />
     </Wrapper>
